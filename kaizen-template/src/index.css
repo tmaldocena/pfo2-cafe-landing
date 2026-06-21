@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #0C0C0C;
+  overflow-x: clip;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #C97A4A 0%, #EDE3D3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #C97A4A;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0C0C0C;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A2E1F;
+  border-radius: 8px;
+}
